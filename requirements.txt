@@ -1,0 +1,14 @@
+# Recommended Python version is 3.11
+tensorflow
+opencv-contrib-python
+
+# For training the model
+scikit-learn
+mediapipe==0.10.9 
+matplotlib
+
+# For Text to speech
+gtts
+pyttsx3
+pygame
+translate
