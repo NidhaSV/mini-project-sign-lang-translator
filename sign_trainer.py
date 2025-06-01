@@ -180,24 +180,8 @@ def trainModel():
     plt.legend(loc="lower left")
     plt.savefig('evaluation.png')
     # Serialize the model to disk
-    print("[INFO] saving mask detector model...")
+    print("[INFO] Saving the model to: ", DEFAULT_MODEL_PATH)
     classifier.save(DEFAULT_MODEL_PATH)
-    print("Done !")
-    import matplotlib.pyplot as plt
-    plt.plot(H.history['loss'])
-    plt.plot(H.history['val_loss'])
-    plt.xlabel('epochs')
-    plt.ylabel('Loss')
-    plt.legend(['train_loss','val_loss'], loc=0)
-    plt.show()
-    import matplotlib.pyplot as plt
-    plt.plot(H.history['accuracy'])
-    plt.plot(H.history['val_accuracy'])
-    plt.xlabel('epochs')
-    plt.ylabel('Accuracy')
-    plt.legend(['train_accuracy','val_accuracy'], loc=0)
-    plt.show()
-
     print(f"Training completed")
 
 
