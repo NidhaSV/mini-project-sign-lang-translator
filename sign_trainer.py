@@ -168,7 +168,6 @@ def trainModel():
     
     N = 20
     H=history
-    plt = plt
     plt.style.use("ggplot")
     plt.figure()
     plt.plot(np.arange(0, N), H.history["loss"], label="train_loss")
@@ -185,15 +184,15 @@ def trainModel():
     classifier.save(DEFAULT_MODEL_PATH)
     print("Done !")
     import matplotlib.pyplot as plt
-    plt.plot(history.history['loss'])
-    plt.plot(history.history['val_loss'])
+    plt.plot(H.history['loss'])
+    plt.plot(H.history['val_loss'])
     plt.xlabel('epochs')
     plt.ylabel('Loss')
     plt.legend(['train_loss','val_loss'], loc=0)
     plt.show()
     import matplotlib.pyplot as plt
-    plt.plot(history.history['accuracy'])
-    plt.plot(history.history['val_accuracy'])
+    plt.plot(H.history['accuracy'])
+    plt.plot(H.history['val_accuracy'])
     plt.xlabel('epochs')
     plt.ylabel('Accuracy')
     plt.legend(['train_accuracy','val_accuracy'], loc=0)
